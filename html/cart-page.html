@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop for YOU</title>
+    <link rel="stylesheet" href="../css/header_adaptive.css" />
+    <link rel="stylesheet" href="../css/header_style.css" />
+    <link rel="stylesheet" href="../css/searchbar_style.css" />
+    <link rel="stylesheet" href="../css/cart_style.css" />
+    <link rel="stylesheet" href="../css/cart_style_adaptive.css" />
+    <link rel="stylesheet" href="../css/header_cart_adaptive.css" />
+    <link rel="SHORTCUT ICON" href="../pictures/878_1.ico" type="image/x-icon" />
+    <script defer src="../js/buttons_cart_events.js"></script>
+    <script type="module" defer src="../js/cart_script.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+
+        <div class="head-info">
+            <button class="menu-burger" id="burger">
+                <img class="icon-image-menu upper" src="../pictures/bars-staggered_9797761.png">
+                <img class="icon-image-menu bottom" src="../pictures/cross_3917189.png">
+            </button>
+            <div class="logo">
+                <a href="main-page.html">
+                    <img class="upper-layed-logo" src="../pictures/logo-without-bookmark.png">
+                    <img class="bottom-layed-logo" src="../pictures/logo-with-bookmark.png">
+                </a>
+            </div>
+            <div class="search">
+                <form>
+                    <input type="search" placeholder="Search..." autofocus required />
+                    <button id="search" type="button">Go</button>
+                </form>
+            </div>
+            <div class="icons">
+                <div><a href="authorization-page.html"><img class="icon-image" src="../pictures/user_456283.png"></a></div>
+                <div><a href="https://t.me/Ssushkova"><img class="icon-image" src="../pictures/app_14936955.png"></a></div>
+                <div class="cart"><a href="cart-page.html">
+                    <div class="cart-count"></div>
+                    <img class="icon-image" src="../pictures/shopping-bag_1656850.png">
+                </a></div>
+                <div><a href=""><img class="icon-image" src="../pictures/question_471664.png"></a></div>
+            </div>
+        </div>
+
+
+        <div class="head-menu">
+            <span><a href="../html/main-page.html">Главная страница</a></span>
+            <span><a href="">Акции</a></span>
+            <span><a href="">Бестселлеры</a></span>
+            <span><a href="">Подарки на 8 марта</a></span>
+            <span><a href="">Клубная карта</a></span>
+        </div>
+
+    </header>
+
+    <div class="cart-wrapper">
+        <div class="cart-panel">
+            <div class="main-title">КОРЗИНА</div>
+            <div class="cart-content"></div>
+            <div class="cart-content-border"></div>
+            <div class="main-title">Итого</div>
+            <div class="cart-summary"></div>
+        </div>
+        <div class="empty-cart-panel"></div>
+    </div>
+
+</body>
+
+</html>

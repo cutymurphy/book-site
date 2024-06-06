@@ -1,0 +1,300 @@
+/* Переменные для цветов */
+
+:root {
+    --main-color: rgb(168, 118, 255);
+    --boarder-hover-color: rgb(116, 35, 255);
+    --boarder-system-color: rgb(219, 219, 219);
+    --sales-color: rgb(174, 20, 20);
+    --default-font: Inter, sans-serif;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+
+/* Оболочка магазина, т.е. раздел с товарами в корзине и итогом  */
+
+.cart-wrapper {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart-panel {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+}
+
+.cart-panel.hidden {
+    display: none;
+}
+
+
+/* Раздел с книжными товарами */
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .product-card {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .product-image {
+        border: 3px solid var(--boarder-system-color);
+        width: auto;
+    }
+
+    .product-image:hover {
+        cursor: pointer;
+        border: 3px solid var(--boarder-hover-color);
+        transition: 0.5s;
+    }
+
+    .product-image:active {
+        cursor: grabbing;
+        border: 3px solid black;
+        transition: 0.1s;
+    }
+
+    .product-name {
+        font-family: 'PTSans-Regular';
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        line-height: 1.5em;
+    }
+
+    .product-name:hover {
+        box-sizing: border-box;
+    }
+
+    .product-name a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .product-name a:hover {
+        color: rgb(136, 0, 255);
+        transition: 0.3s;
+    }
+
+    .input-count {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        border: 2px solid var(--main-color);
+
+        .btn {
+            border: none;
+            color: white;
+            font-weight: bold;
+            background-color: var(--main-color);
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: rgb(194, 159, 255);
+        }
+
+        input {
+            border: none;
+            text-align: center;
+        }
+    }
+
+    .input-count input:focus {
+        outline: 0;
+    }
+
+    .product-price,
+    .product-new-price {
+        width: 15%;
+        position: absolute;
+        right: 10%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-price {
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .product-new-price {
+        color: #ff2b3d;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .product-new-price span {
+        color: gray;
+        text-decoration: line-through;
+        text-decoration-color: #ff2b3d;
+    }
+
+    .delete-wrapper {
+        position: absolute;
+        right: 0;
+        width: 5%;
+
+        button {
+            border: none;
+            background: none;
+        }
+    }
+
+    .icon-image-delete {
+        padding: 5px;
+    }
+
+    .icon-image-delete:hover {
+        cursor: pointer;
+        background-color: var(--boarder-system-color);
+        border-radius: 20%;
+        transition: 0.5s;
+    }
+
+}
+
+.main-title {
+    font-family: 'PTSans-Regular';
+    font-weight: bold;
+}
+
+.cart-content-border {
+    margin: 0 auto;
+    border-bottom: 1px solid var(--boarder-system-color);
+}
+
+.cart-summary {
+    margin: 0 auto;
+    height: 100px;
+    border-bottom: 1px solid var(--boarder-system-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'PTSans-Regular';
+
+    .text-summary {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .cost-text {
+            font-weight: bold;
+        }
+    }
+
+    .checkout-btn {
+        background-color: var(--main-color);
+        color: #fff;
+        font-family: 'PTSans-Regular';
+        font-weight: 500;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .checkout-btn:hover {
+        background-color: var(--boarder-hover-color);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .checkout-btn:active {
+        transform: scale(1.05);
+        cursor: grabbing;
+    }
+}
+
+
+/* Пустая корзина */
+
+.empty-cart-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .empty-cart-img {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .empty-cart-bold-text {
+        font-weight: bold;
+        font-family: 'PTSans-Regular';
+    }
+
+    .empty-cart-thin-text {
+        font-family: 'PTSans-Regular';
+        width: 70%;
+        text-align: center;
+
+        .catalog-link {
+            text-decoration: none;
+            color: var(--main-color);
+        }
+
+        .catalog-link:hover {
+            cursor: pointer;
+            color: var(--boarder-hover-color);
+            transition: 0.3s;
+        }
+    }
+
+    
+
+}
+
+
+
+/* Футер */
+
+#footer {
+    margin-left: 1vw;
+    font-family: 'DancingScript';
+    font-size: 20px;
+}
+
+
+
+/* Кастомизация полосы прокрутки */
+
+::-webkit-scrollbar {
+    width: 1vw;
+    background-color: var(--boarder-system-color);
+    opacity: 1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--boarder-hover-color);
+    border-radius: 2vw;
+}
+
+
+
+/* Импорт шрифтов */
+
+@font-face {
+    font-family: 'DancingScript';
+    src: url("../fonts/DancingScript.ttf");
+}
+
+
+@font-face {
+    font-family: 'PTSans-Regular';
+    src: url("../fonts/PTSans-Regular.ttf");
+}
