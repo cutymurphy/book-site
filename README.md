@@ -1,1 +1,1 @@
-<strong> my bookshop site for auxo team! </strong>
+<strong> my bookshop site! </strong>
