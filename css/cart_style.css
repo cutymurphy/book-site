@@ -198,21 +198,29 @@ body {
     }
 
     .checkout-btn {
-        background-color: var(--main-color);
         color: #fff;
         font-family: 'PTSans-Regular';
         font-weight: 500;
         border-radius: 5px;
         border: none;
+
+        &.unabled {
+            background-color: gainsboro;
+            cursor: not-allowed;
+        }
+
+        &.enabled {
+            background-color: var(--main-color);
+        }
     }
     
-    .checkout-btn:hover {
+    .checkout-btn.enabled:hover {
         background-color: var(--boarder-hover-color);
         cursor: pointer;
         transition: 0.5s;
     }
     
-    .checkout-btn:active {
+    .checkout-btn.enabled:active {
         transform: scale(1.05);
         cursor: grabbing;
     }

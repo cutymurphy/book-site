@@ -16,13 +16,13 @@ header {
 
 @media screen and (min-width: 1440px) {
     body {
-        padding-top: 176px;
+        padding-top: 114px;
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439.98px) {
     body {
-        padding-top: 160px;
+        padding-top: 110px;
     }
 }
 
@@ -110,6 +110,25 @@ header {
     font-family: var(--default-font);
     font-weight: bold;
 }
+
+.user-icon-wrapper {
+    position: relative;
+    position: relative;
+
+    .user-name {
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+        width: 45px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
 
 .head-menu span a {
     text-decoration: none;

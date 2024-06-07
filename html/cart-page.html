@@ -14,6 +14,7 @@
     <link rel="SHORTCUT ICON" href="../pictures/878_1.ico" type="image/x-icon" />
     <script defer src="../js/buttons_cart_events.js"></script>
     <script type="module" defer src="../js/cart_script.js"></script>
+    <script type="module" defer src="../js/header_script.js"></script>
 </head>
 
 <body>
@@ -31,29 +32,24 @@
                 </a>
             </div>
             <div class="search">
-                <form>
+                <form class="header-form">
                     <input type="search" placeholder="Search..." autofocus required />
                     <button id="search" type="button">Go</button>
                 </form>
             </div>
             <div class="icons">
-                <div><a href="authorization-page.html"><img class="icon-image" src="../pictures/user_456283.png"></a></div>
-                <div><a href="https://t.me/Ssushkova"><img class="icon-image" src="../pictures/app_14936955.png"></a></div>
-                <div class="cart"><a href="cart-page.html">
-                    <div class="cart-count"></div>
-                    <img class="icon-image" src="../pictures/shopping-bag_1656850.png">
+                <div class="user-icon-wrapper"><a href="authorization-page.html">
+                        <div class="user-name"></div>
+                        <img class="icon-image" src="../pictures/user_456283.png">
                 </a></div>
-                <div><a href=""><img class="icon-image" src="../pictures/question_471664.png"></a></div>
+                <div><a href="https://t.me/Ssushkova"><img class="icon-image" src="../pictures/app_14936955.png"></a>
+                </div>
+                <div class="cart"><a href="cart-page.html">
+                        <div class="cart-count"></div>
+                        <img class="icon-image" src="../pictures/shopping-bag_1656850.png">
+                    </a></div>
+                <!-- <div><a href=""><img class="icon-image" src="../pictures/question_471664.png"></a></div> -->
             </div>
-        </div>
-
-
-        <div class="head-menu">
-            <span><a href="../html/main-page.html">Главная страница</a></span>
-            <span><a href="">Акции</a></span>
-            <span><a href="">Бестселлеры</a></span>
-            <span><a href="">Подарки на 8 марта</a></span>
-            <span><a href="">Клубная карта</a></span>
         </div>
 
     </header>

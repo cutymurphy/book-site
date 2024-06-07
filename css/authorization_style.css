@@ -1,0 +1,138 @@
+:root {
+	--main-color: rgb(168, 118, 255);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.auth-wrapper {
+	margin-top: 100px;
+	width: 300px;
+	background: white;
+	color: var(--main-color);
+	background-color: rgb(249, 248, 248);
+	border-radius: 5px;
+	border: 0.5px solid rgb(222, 221, 221);
+	padding: 20px 40px;
+	font-family: 'PTSans-Regular';
+	display: block;
+
+	&.hidden {
+		display: none;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.input-box {
+		height: 40px;
+		border: 1.5px solid var(--main-color);
+		border-radius: 30px;
+		margin: 20px 0;
+		position: relative;
+		width: 300px;
+
+		input {
+			background: transparent;
+			border: none;
+			outline: none;
+			height: 100%;
+			width: 300px;
+			padding-left: 20px;
+			font-size: 16px;
+		}
+	}
+
+	i {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.btn {
+		margin: 10px 0;
+		width: 100%;
+		height: 40px;
+		background: none;
+		border: none;
+		background: var(--main-color);
+		border-radius: 40px;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: 'PTSans-Regular';
+		color: white;
+
+		&:hover {
+			background-color: var(--boarder-hover-color);
+			cursor: pointer;
+			transition: 0.3s;
+		}
+	}
+}
+
+
+.user-wrapper {
+	display: block;
+	font-size: 20px;
+	font-family: 'PTSans-Regular';
+	margin-top: 200px;
+	text-align: center;
+
+	.hello-user-text {
+		div {
+			margin-bottom: 10px;
+		}
+	}
+
+	span {
+		font-weight: 600;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--main-color);
+
+		&:hover {
+			color: var(--boarder-hover-color);
+			transition: 0.3s;
+		}
+	}
+
+	.unregister-btn {
+		font-family: 'PTSans-Regular';
+		margin-top: 50px;
+		padding: 10px 30px;
+		border-radius: 40px;
+		border: none;
+		outline: none;
+		background-color: var(--main-color);
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--boarder-hover-color);
+			cursor: pointer;
+			transition: 0.3s;
+		}
+	}
+
+	&.hidden {
+		display: none;
+	}
+}
+
+
+
+/* Импорт шрифтов */
+
+@font-face {
+	font-family: 'PTSans-Regular';
+	src: url("../fonts/PTSans-Regular.ttf");
+}

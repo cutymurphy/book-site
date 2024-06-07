@@ -225,7 +225,7 @@
                 height: 30px;
             }
 
-            .search form {
+            .search .header-form {
                 width: 90%;
             }
         }
@@ -277,7 +277,7 @@
                 height: 30px;
             }
 
-            .search form {
+            .search .header-form {
                 width: 90%;
             }
         }
@@ -329,7 +329,7 @@
                 height: 25px;
             }
 
-            .search form {
+            .search .header-form {
                 width: 90%;
             }
         }

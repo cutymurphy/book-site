@@ -13,6 +13,12 @@ cartCount.innerText = totalCount > 0 ? String(totalCount) : "";
 const bookShelf = document.querySelector('.cart-content');
 const cartSummary = document.querySelector('.cart-summary');
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".header-form").addEventListener("click", function () {
+        window.location.href = "../html/main-page.html";
+    })
+});
+
 
 const initiateCartProducts = () => {
     cartStates.forEach(i => {
@@ -139,15 +145,24 @@ const initiateCartSummary = () => {
 
     const cartBtn = document.createElement('button');
     cartBtn.classList.add('checkout-btn');
+    if (sessionStorage.getItem("registered") === "false" || sessionStorage.getItem("registered") == undefined) {
+        cartBtn.classList.add('unabled');
+        cartBtn.addEventListener('click', () => {
+            alert('Сначала зарегистрируйтесь.');
+        });
+    } else {
+        cartBtn.classList.add("enabled");
+        cartBtn.addEventListener('click', () => {
+            alert('Ваш заказ принят в обработку.');
+        });
+    }
     cartBtn.id = 'checkout-btn';
     cartBtn.innerText = "Оформить заказ";
 
     cartSummary.appendChild(textSummary);
     cartSummary.appendChild(cartBtn);
 
-    cartBtn.addEventListener('click', () => {
-        alert('Ваш заказ принят в обработку.');
-    });
+
 }
 
 const changeSummary = (totalCount, totalSum) => {
